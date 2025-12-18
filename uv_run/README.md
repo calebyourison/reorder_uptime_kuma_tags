@@ -18,6 +18,6 @@ The script is looking for two variables: a path to the sqlite file and a True/Fa
 You can navigate into the directory or use its absolute path and chain everything into a one-liner:
 
 ```bash
-    # Path to script folder                                   # Path to db file   # True/False user confirmation      
+    # Path to script folder                                 # Path to db file     # True/False user confirmation      
 cd /some/path/to/reorder_uptime_kuma_tags && uv run main.py /some/path/to/kuma.db True
 ```

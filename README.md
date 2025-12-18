@@ -7,7 +7,7 @@ When creating tags they are displayed in their order of creation.
 When adding tags to monitors, the order in which they are added determines the display order.
 There is currently no option to sort or reorder them.
 
-**For installations running SQLite**, this script will perform a single database update and reorder the tags alphabetically.
+**For installations running SQLite**, this script will perform a single database update and reorder the tags *alphabetically*.
 The script will need to be run again in the event that further tags have been created and/or added to monitors.
 For installations running MariaDB, a similar approach is likely possible, but not covered in this project.
 
@@ -36,7 +36,7 @@ execute(my_db_file, confirm=True)
 ```
 
 The script is fairly basic.  
-The process identifies an alphabetical order for tags based on the name present in the `tag` table.
+The process identifies an *alphabetical* order for tags based on the name present in the `tag` table.
 From there, it generates a mapping for {new_id:old_id} so that it can reorder the entries in both the `tag` table as well as the `monitor_tag` table.
 
 It's highly recommend to perform periodic backups of your database.  You can run this script during that process if desired.
