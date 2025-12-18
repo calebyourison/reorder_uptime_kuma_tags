@@ -18,8 +18,9 @@ REVERTING TO THE ORIGINAL SQLITE FILE MAY BE NEEDED IF THE CHANGES ARE UNDESIRAB
 ___
 **Did you create a backup of your db file yet?**
 
-Stop the Uptime Kuma process entirely first.  Then copy the db file to a local path. Save a copy in a protected directory until you are certain everything worked as desired.
-Once the changes have been applied, the db file should be copied back into the Uptime Kuma directory and then restarted.
+<u>Stop the Uptime Kuma process entirely first</u>.  Then copy the db file to a local path. Save a copy in a protected directory until you are certain everything worked as desired.
+Once the changes have been applied, the db file should be copied back into the Uptime Kuma directory and then restarted. 
+If the changes fail for some reason, revert to the protected copy.
 
 The recommended way to use this script, especially for those unfamiliar with Python, is the `uv` approach.
 Please see the [README](https://github.com/calebyourison/reorder_uptime_kuma_tags/blob/master/uv_run/README.md) for details on how to run it via this method.
@@ -51,7 +52,7 @@ tag_table = return_table_rows(cursor, "tag")
 for row in tag_table:
     print(row)
 
-#(Tag_ID, Name, Color, Creation Date)    
+# (Tag_ID, Name, Color, Creation Date)    
 (3, 'My_website', '#4B5563', '2025-07-13 15:25:30')
 (4, 'A_server', '#4B5563', '2025-07-13 17:34:31')
 (5, 'Docker_Host', '#2563EB', '2025-07-13 19:20:54')
@@ -79,7 +80,7 @@ for row in monitor_tag_table:
 ```
 
 The script identifies an *alphabetical* order for tags based on the tag names present in the `tag` table.
-From there, it generates a mapping for {new_id:old_id} so that it can reorder the entries in both the `tag` table as well as the `monitor_tag` table.
+From there, it generates a mapping for {old_id: new_id} so that it can reorder the entries in both the `tag` table as well as the `monitor_tag` table.
 
 It's highly recommend to perform periodic backups of your database.  You can run this script during that process if desired.
 
