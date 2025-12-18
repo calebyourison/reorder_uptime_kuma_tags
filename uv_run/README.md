@@ -1,11 +1,12 @@
 # uv_run to Reorder Tags Within Uptime Kuma (SQLite)
 ___
+**Did you create a backup of your db file yet?**
 
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
 Copy the folder to your device and unzip.
  ```bash
-curl -L -o reorder_uptime_kuma_tags.zip https://github.com/calebyourison/reorder_uptime_kuma_tags/releases/download/
+curl -L -o reorder_uptime_kuma_tags.zip https://github.com/calebyourison/reorder_uptime_kuma_tags/releases/download/reorder_uptime_kuma_tags/uv_run.zip
 
 unzip reorder_uptime_kuma_tags.zip
  ```

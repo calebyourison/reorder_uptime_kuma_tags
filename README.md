@@ -16,16 +16,18 @@ REVERTING TO THE ORIGINAL SQLITE FILE MAY BE NEEDED IF THE CHANGES ARE UNDESIRAB
 
 ## Usage
 ___
-**Did you create a backup your db file yet?**
+**Did you create a backup of your db file yet?**
 
 Ideally, stop the process entirely first.  Then copy the db file to a local path.
 
 The recommended way to use this script, especially for those unfamiliar with Python, is the `uv` approach.
-Please see the [README]() for details on how to run it via this method.
+Please see the [README](https://github.com/calebyourison/reorder_uptime_kuma_tags/blob/master/uv_run/README.md) for details on how to run it via this method.
 
 For those with active Python environments, the `reorder_tags.py` script can be copied into your IDE and run via the `execute()` function.
 The function requires a local path to the db file.  
 Optionally, one can disable the confirm parameter if running this script via automation as it requires user response.
+
+**...Did you create a backup of your db file yet?**
 
 ```bash
 my_db_file = 'some/path/to/file.db'
@@ -35,7 +37,7 @@ execute(my_db_file, confirm=True)
 
 The script is fairly basic.  
 The process identifies an alphabetical order for tags based on the name present in the `tag` table.
-From their, it generates a mapping for {new_id:old_id} so that it can reorder the entries in both the `tag` table as well as the `monitor_tag` table.
+From there, it generates a mapping for {new_id:old_id} so that it can reorder the entries in both the `tag` table as well as the `monitor_tag` table.
 
 It's highly recommend to perform periodic backups of your database.  You can run this script during that process if desired.
 
