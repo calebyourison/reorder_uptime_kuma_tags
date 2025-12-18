@@ -18,7 +18,7 @@ REVERTING TO THE ORIGINAL SQLITE FILE MAY BE NEEDED IF THE CHANGES ARE UNDESIRAB
 ___
 **Did you create a backup of your db file yet?**
 
-<u>Stop the Uptime Kuma process entirely first</u>.  Then copy the db file to a local path. Save a copy in a protected directory until you are certain everything worked as desired.
+<ins>Stop the Uptime Kuma process entirely first</ins>.  Then copy the db file to a local path. Save a copy in a protected directory until you are certain everything worked as desired.
 Once the changes have been applied, the db file should be copied back into the Uptime Kuma directory and then restarted. 
 If the changes fail for some reason, revert to the protected copy.
 
