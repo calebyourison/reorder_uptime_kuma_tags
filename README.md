@@ -8,7 +8,7 @@ When adding tags to monitors, the order in which they are added determines the d
 There is currently no option to sort or reorder them.
 
 **For installations running SQLite**, this script will perform a single database update and reorder the tags *alphabetically*.
-The script will need to be run again in the event that further tags have been created and/or added to monitors.
+The script will need to be run again in the event that more tags have been created and/or added to monitors.
 For installations running MariaDB, a similar approach is likely possible, but not covered in this project.
 
 **BACKUP YOUR DB FILE BEFORE ATTEMPTING ANY CHANGES.  
