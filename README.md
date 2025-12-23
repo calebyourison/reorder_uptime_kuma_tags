@@ -1,7 +1,7 @@
 # Reorder Tags Within Uptime Kuma (SQLite)
 ___
 
-For those who enjoy and highly recommend [Uptime Kuma](https://github.com/louislam/uptime-kuma), this script is a Band-Aid approach to a [feature request](https://github.com/louislam/uptime-kuma/issues/1308) that will likely be implemented at some point in the future.
+For those who enjoy and highly recommend [Uptime Kuma](https://github.com/louislam/uptime-kuma), this script is a Band-Aid approach to a [feature request](https://github.com/louislam/uptime-kuma/issues/2408) that will likely be implemented at some point in the future.
 
 When creating tags they are displayed in their order of creation.  
 When adding tags to monitors, the order in which they are added determines the display order.
@@ -12,7 +12,7 @@ The script will need to be run again in the event that further tags have been cr
 For installations running MariaDB, a similar approach is likely possible, but not covered in this project.
 
 **BACKUP YOUR DB FILE BEFORE ATTEMPTING ANY CHANGES.  
-REVERTING TO THE ORIGINAL SQLITE FILE MAY BE NEEDED IF THE CHANGES ARE UNDESIRABLE OR DATA GETS CORRUPTED**
+REVERTING TO THE ORIGINAL SQLITE FILE MAY BE NEEDED IF THE CHANGES ARE UNDESIRABLE OR DATA GETS CORRUPTED.**
 
 ## Usage
 ___
@@ -84,5 +84,4 @@ From there, it generates a mapping for {old_id: new_id} so that it can reorder t
 
 It's highly recommend to perform periodic backups of your database.  You can run this script during that process if desired.
 
-This works especially if using Docker and the container is stopped for a short while so the volume can be copied. 
-
+This works especially well if using Docker and the container is stopped for a short while so the volume can be copied. 
